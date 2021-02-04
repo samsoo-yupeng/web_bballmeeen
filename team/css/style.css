@@ -1,0 +1,40 @@
+html, body, .main{
+  font-family: 'MicrosoftYaHei', "微软雅黑", Arial;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+body{background:#ffffff;}
+.main{margin:0 2%;text-align: center;}
+.result{text-align: left;}
+.main .qrcode{width:100%;}
+.main .i-cover{width:100%;margin:0 auto;}
+.main .desc{font-size:16px;line-height:25px;}
+.main .test-name{margin:20px auto;text-align: center; }
+.main .date, .main .name{color:#666;margin-right:8px;}
+.main .i-input,.main .i-submit,.main .i-share{display: inline-block;height:45px;text-align:center;width:180px;}
+.main .i-input{border:1px solid #000;font-size:0.9em;padding:0 5px;}
+.main .i-submit,.main .i-share{background:#945b5b;color:#ffffff;font-weight:700;line-height:45px;width:120px;border-radius:5px;}
+.main .i-share{margin-left:60px;background:#e69f28}
+.main .uname{color:#0000FF;}
+.main .hint{color: #666;font-size: 14px}
+
+
+.posts-cjtz{box-shadow:none;text-align:center}
+.clearfix:after{clear:both;text-align:center}
+.clearfix:before,.clearfix:after{content:" ";display:table;text-align:center}
+
+
+.footer{background-color:#282828}
+.footer{padding:15px 0;font-size:12px;color:#ababab;z-index:100;position:relative}
+.footer a{color:#ddd}
+.footer a:hover{color:#FFF}
+.footer .social-profiles{text-align:right;font-size:14px}
+.footer .social-profiles a{margin-left:15px;display:inline-block}
+.row:after,.row:before{content:" ";display:table}
+.row:after{clear:both}
+.footer .inner{padding:25px 0;color:#ddd;font-size:14px}
+.footer .inner .f-qq-dropdown p,.footer .inner .f-qq-dropdown p a,.footer .inner .f-weixin-dropdown p{color:#555;text-align:center}
+#footer-copyright{float:center;text-align:center}

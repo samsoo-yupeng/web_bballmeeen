@@ -1,0 +1,162 @@
+﻿<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <link rel="stylesheet" href="css/style.css">
+        <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            var uname = getUrlParameter('name');
+            var team  = getUrlParameter('team');
+            var teams = [
+                {name: '騎士', img: 'imgs/r1.jpg', title: '潛力無限？ABC一年短約加盟騎士，他將成為騎士隊新賽季的奇兵？？', desc: '據YAHOO名記woj和知名體育公司“諜報”聯合爆料，騎士隊將以1年120萬美元的合同簽下國際新星ABC。<br><br>雙方是在克利夫蘭完成的簽約，簽約之後立即舉行了新聞發布會。在發布會上，騎士隊主教練Tyronn Lue親自登場，他向媒體解釋道簽下ABC的真實原因：“因為在休賽期我打野球的時候，被這位小伙顏射了一記三分球，為了防守他這球，我不幸摔倒了，他沒有像當年Allen Iverson那樣一跨而過，而是將我扶了起來。我們球隊需要有這樣一名優秀的球員！”<br><br>在談到簽約騎士隊的感受時，ABC這樣說道：“騎士隊是一只強隊，有著優秀的人員配置和出色的教練，還擁有LeBron Jame、Kyrie Irving這樣頂級的球員，我很高興能夠加盟騎士隊，相信下個賽季我們的球隊能再獲總冠軍！”'},
+
+
+                {name: '勇士', img: 'imgs/r2.jpg', title: '勇士兩年合同簽下野球場三分王ABC，MVP都表示驚呆了？', desc: '據YAHOO名記woj和知名體育公司“諜報”聯合爆料，勇士隊將簽下自由球員ABC。<br><br>據悉，這份合同是1+1的模式，總薪水達到了400萬。<br><br>勇士球員Stephen Curry表示：“太驚訝了，之前從來沒有聽說過ABC球員的名字，但據主教練Steve Kerr透露，他的團隊觀察到了ABC在野球場上的表現，‘簡直太出色了，在三分線外幾乎沒有投丟過！！’如果真是這樣的話，我會感到壓力很大！”<br><br>而新援Kevin Durant則表示：“ABC具有成為首發球員的潛質，他出色的投籃能力可以稍微掩蓋防守端移動速度慢的缺陷。只需勤加訓練，有朝一日必能聲名大振！”'},
+
+
+                {name: '雷霆', img: 'imgs/r3.jpg', title: 'KD的完美替代品？雷霆3年600萬簽下自由球員ABC', desc: '據YAHOO名記woj和知名體育公司“諜報”聯合爆料，雷霆隊將提供給ABC一份3年600萬的合同。<br><br>據悉，ABC還收到了騎士隊和勇士隊的邀約，但最終，他選擇來到俄克拉荷馬城。<br><br>Russell Westbrook表示：“我對ABC這位球員早有耳聞，他擁有出色的個人能力和優秀的團隊意識，簽下他之後，我覺得我們球隊陣容更強了！ABC有比KD更強的實力！下個賽季，我們的目標是總冠軍！”<br><br>ABC身高達到了驚人的2.24釐米，再加上其出眾的彈跳和意識，讓他在球場上表現的游刃有余。相信雷霆隊的這筆簽約能夠帶來給球隊帶來質的飛躍，向著總冠軍發起沖擊！'},
+
+
+                {name: '湖人', img: 'imgs/r4.jpg', title: '天降餡餅？紫金軍團2年1200萬簽下ABC，湖人的未來可期？', desc: '據YAHOO名記woj和知名體育公司“諜報”聯合爆料，湖人隊在自由球員市場中正式簽下了得分後衛ABC，據小道消息，這份1+1合同的總價值是1200萬美金。<br><br>湖人隊新帥Luke Walton毫不吝嗇對ABC的贊美之詞：“ABC將會成為歷史級別的球員，他的打球風格太像Kobe Bryant了！尤其是他那不服輸的精神能感染球場內每一個人！”<br><br>在談論到不服輸的精神究竟表現在哪的時候，Walton表示：“他在和Kobe單挑（NBA2K）的時候，即使落後了30多分也沒有放棄（雖然分差被越拉越大），但是這裡也可以看出他爭強好勝的性格，我們相信，有這種性格的人在籃球場上一定會是贏家！！”<br><br>據悉，ABC與Kobe Bryant的私交頗好，在休賽期，Kobe經常跟ABC一起訓練（NBA2K），湖人此番以600萬一年的價格簽下ABC可謂是超值！'},
+
+
+                {name: '馬刺', img: 'imgs/r5.jpg', title: '老兵們最好的潤滑劑？馬刺一年250萬簽下ABC！', desc: '據YAHOO名記woj和知名體育公司“諜報”聯合爆料，馬刺隊在自由球員市場上簽下了大前鋒ABC，而新賽季，ABC極有可能成為馬刺隊的重要一員甚至先發！<br><br>剛剛退役不久的Tim Duncan在談到此筆簽約時表示：“這是一筆偉大的簽約！我沒有想到球隊會用這麼低廉的價格就簽下ABC這樣一位歷史級別的球員！他擁有著不輸於我的智慧，相信在這一年，他能夠逐漸替代我成長為球隊的主心骨！”<br><br>據悉，ABC的身世略顯神秘，25歲之前沒有接觸過籃球，隨後，他用一年的時間實現了門外漢到野球場霸主的轉變，此番加入馬刺，他的目標一定是幫助這只老邁的球隊重新散發活力！'},
+
+
+                {name: '火箭', img: 'imgs/r6.jpg', title: 'Daryl Morey瘋了？火箭2年4000萬豪砸ABC，他難道不是水貨？', desc: '隨著KD奔赴金州，自由球員市場上的大魚所剩無幾，但火箭隊卻劍走偏鋒。據YAHOO名記woj和知名體育公司“諜報”聯合爆料，ABC接受了火箭隊2年4000萬的報價，空降休斯敦。<br><br>火箭隊經理Daryl Morey表示：“ABC是我見過的最出色的球員！他擁有熊的力量，豹的速度，我從未見過天賦如此爆表之人！”<br><br>然而火箭球員James Harden卻對這筆簽約並不看好：“瘋了吧，2000萬簽一個得分後衛？這是要跟我來搶位置嗎？不過，我是不怕競爭的！”<br><br>據悉，ABC在今年夏天的野球場上打爆了多位NBA球星，這也是為什麼Daryl Morey敢在他身上砸下這麼多錢的原因。'},
+
+
+                {name: '塞爾蒂克', img: 'imgs/r7.jpg', title: '潛力無限！ABC 4年2000萬加盟綠衫軍，塞爾蒂克復興在望？', desc: '據YAHOO名記woj和知名體育公司“諜報”聯合爆料，塞爾蒂克與小前鋒ABC達成口頭協議。<br><br>據悉，這是一份3+1的合同，總價值達到2000萬，ABC有球員選項。<br><br>塞爾蒂克隊經理Danny Ainge表示：“ABC能夠有效補充球隊的短板，他將是我們球隊沖擊總冠軍的最後一塊拼圖！”<br><br>據可靠消息，ABC之所以能夠與塞爾蒂克簽下這樣一份合同，可能與他那一身綠油油的膚色有關。'},
+
+
+                {name: '76人', img: 'imgs/r8.jpg', title: '填補工資帽？76人1年3000萬簽下ABC，他將成為Joel Embiid最佳幫手？', desc: '據YAHOO名記woj和知名體育公司“諜報”聯合爆料，76人隊將以一年3000萬的天價簽下自由球員ABC。<br><br>Joel Embiid第一時間發Twitter表示慶祝：“嘿，我知道ABC是一位傑出的球員，他那飛快的手速讓我想起了加藤鷹，哦不，是Kyrie Irving！相信下個賽季，他會好好輔佐我沖擊總冠軍的！”<br><br>據小道消息，76人隊之所以給出這樣的天價，一是因為他們確實看中ABC的潛質，二是他們離窮逼線剛好還剩3000萬的空間。'},
+
+
+                {name: '尼克', img: 'imgs/r9.jpg', title: '甜瓜做夢也會笑，紐約2年600萬簽下ABC！', desc: '據YAHOO名記woj和知名體育公司“諜報”聯合爆料，紐約尼克隊與業余球員ABC達成口頭協議。<br><br>據悉，雙方簽下了一份1+1的600萬合同，尼克隊擁有球隊選項。<br><br>禪師表示：“ABC就是我看中的那個天選之人！他能夠成為Carmelo Anthony、Derrick Rose、Joakim Noah身邊最好的幫手，有了他，我們球隊爭奪總冠軍的希望大增！”<br><br>此外，據小道消息，時隔多日之後，有人再次在紐約尼克訓練館的廁所邊上聽見陣陣笑聲。'},
+
+
+                {name: '快艇', img: 'imgs/r10.jpg', title: '快艇隊1年400萬簽下ABC，CP3+他=西決無憂？', desc: '據YAHOO名記woj和知名體育公司“諜報”聯合爆料，洛杉磯快艇隊將給ABC一份1年400萬的合同。<br><br>快船球員Chris Paul表示：“難以置信！像ABC這種級別的球員會加盟我們球隊，感謝球隊管理層做了一筆如此精明的簽約！”<br><br>而快船老板則表示：“ABC是一個優秀的球員，他擁有姚明的優秀品質，相信ABC能夠很快的融入球隊，幫助球隊沖擊總冠軍！”<br><br>據悉，ABC同時還收到了其他球隊的邀約，但是洛杉磯的大市場顯然起到了重要的作用。'},
+            ];
+            var title = '';
+
+            var today = new Date();
+            var dd    = today.getDate();
+            var mm    = today.getMonth()+1;
+            var yyyy  = today.getFullYear();
+
+            var date = yyyy + '-' + mm + '-' + dd;
+            today    = yyyy + '年' + mm + '月' + dd +'日';
+
+            $('.date').html(date);
+            $('.name').html(uname);
+
+            if(team) {
+                for (var i = teams.length - 1; i >= 0; i--) {
+                    if (teams[i].name == team) {
+                        title    = teams[i].title.replace('ABC', uname);
+                        var desc = teams[i].desc.replace(/ABC/g, '<span class="uname">' + uname + '</span>');
+
+                        $('.title').html(title);
+                        $('.i-cover').attr('src', teams[i].img);
+                        $('.desc').html(today + '，' + desc);
+                    };
+                };
+            } else {
+                var num = Math.floor(Math.random()*10);
+                for (var i = teams.length - 1; i >= 0; i--) {
+                    if (i == num) {
+                        title    = teams[i].title.replace('ABC', uname);
+                        var desc = teams[i].desc.replace(/ABC/g, '<span class="uname">' + uname + '</span>');
+
+                        $('.title').html(title);
+                        $('.i-cover').attr('src', teams[i].img);
+                        $('.desc').html(today + '，' + desc);
+                    };
+                };
+            }
+
+            document.title = title;
+
+        }); 
+        
+        function share () {
+            $(".guide").show();
+            $(".cover").show();
+        }
+
+        function hideCover () {
+            $(".guide").hide();
+            $(".cover").hide();
+        }
+        var getUrlParameter = function getUrlParameter(sParam) {
+            var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+                sURLVariables = sPageURL.split('&'),
+                sParameterName,
+                i;
+
+            for (i = 0; i < sURLVariables.length; i++) {
+                sParameterName = sURLVariables[i].split('=');
+
+                if (sParameterName[0] === sParam) {
+                    return sParameterName[1] === undefined ? true : sParameterName[1];
+                }
+            }
+        };
+        </script>
+    </head>
+    <body>
+        <div class="main result">
+            <h2 class="title"> </h2>
+            <p><span class="date"></span> <span class="name"></span> 黑特籃球網</p>
+			<div class="posts-cjtz content-cjtz clearfix">
+					<script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- sideads-1 -->
+                    <ins class="adsbygoogle"
+						style="display:inline-block;width:300px;height:250px"
+						data-ad-client="ca-pub-4059643053601138"
+						data-ad-slot="7388026405"></ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+            <img src="imgs/main.jpg" class="i-cover">
+            <p class="desc"></p>
+            <div class="test-name">
+                <a class="i-submit" href="javascript:;">再玩一次</a>
+            </div>
+			<div class="posts-cjtz content-cjtz clearfix">
+					<script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- sideads-1 -->
+                    <ins class="adsbygoogle"
+						style="display:inline-block;width:300px;height:250px"
+						data-ad-client="ca-pub-4059643053601138"
+						data-ad-slot="7388026405"></ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+            <p class="hint">以上新聞純屬虛構！</p>
+            
+        </div>
+		<div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="inner clearfix">
+						<div id="footer-copyright">Copyright © 2015 <a href="http://www.ballgametime.com/" title="Haters-黑特籃球NBA新聞影片圖片分享社區" rel="home">Haters-黑特籃球NBA新聞影片圖片分享社區</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </body>
+</html>
+
+<script type="text/javascript">
+    $(".i-submit").click(function(){
+        window.location.href='index.html';
+    });
+</script>

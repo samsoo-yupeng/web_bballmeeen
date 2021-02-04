@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="xxx">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>你會加盟哪支NBA球隊呢？</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    </head>
+    <body>
+        <div class="main">
+            <h2> 你會加盟哪支NBA球隊呢？ </h2>
+			<div class="posts-cjtz content-cjtz clearfix">
+					<script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- sideads-1 -->
+                    <ins class="adsbygoogle"
+						style="display:inline-block;width:300px;height:250px"
+						data-ad-client="ca-pub-4059643053601138"
+						data-ad-slot="7388026405"></ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+            <img src="imgs/main.jpg" class="i-cover">
+            <p class="desc">NBA自由球員市場風起雲湧，只要你是一位球員，能在NBA打上球，就會有一筆巨款砸向你。那麼，你想不想加盟NBA球隊，登上人生巔峰呢？</p>
+            <div class="test-name">
+                <input type="text" placeholder="輸入你的姓名" class="i-input"><br><br>
+                <a class="i-submit" href="javascript:;">生成</a>
+            </div>
+			<div class="posts-cjtz content-cjtz clearfix">
+					<script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- sideads-1 -->
+                    <ins class="adsbygoogle"
+						style="display:inline-block;width:300px;height:250px"
+						data-ad-client="ca-pub-4059643053601138"
+						data-ad-slot="7388026405"></ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+		</div>
+		
+		<div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="inner clearfix">
+						<div id="footer-copyright">Copyright © 2015 <a href="http://www.ballgametime.com/" title="Haters-黑特籃球NBA新聞影片圖片分享社區" rel="home">Haters-黑特籃球NBA新聞影片圖片分享社區</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> 
+		
+    </body>
+</html>
+
+<script type="text/javascript">
+var teams = ['騎士', '勇士', '雷霆', '湖人', '馬刺', '火箭', '塞爾蒂克', '76人', '尼克', '快艇'];
+
+$(".i-submit").click(function(){
+    var name = $(".i-input").val();
+    if(!name) {
+        alert('請輸入姓名');
+        return false;
+    }
+
+    var num = Math.floor(Math.random()*10);
+    window.location.href='result.html?name=' + name + '&team=' + teams[num];
+})
+</script>
